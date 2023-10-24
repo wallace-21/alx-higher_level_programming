@@ -1,14 +1,15 @@
 #!/usr/bin/python3
 
+import sys
+
 if __name__ == "__main__":
 
-    import sys
+    arguments = sys.argv[:-1]
 
     sums = 0
 
-    for i in sys.argv:
+    for i in arguments:
 
-        if i.isdigit():
-            sums += int(i)
+        sums += int(i)
 
-    print("{}".format(sums))
+        print(sums)
