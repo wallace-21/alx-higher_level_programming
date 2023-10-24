@@ -8,7 +8,7 @@ class Square:
 
     """Defines a square."""
 
-    def _init_(self, size):
+    def __init__(self, size):
 
         """This is the constructor (init method)
 
