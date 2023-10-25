@@ -3,7 +3,6 @@
 """Square module."""
 
 
-
 class Square:
 
     """Defines a square."""
