@@ -4,11 +4,9 @@
 
 
 class Rectangle:
-
     """Represent a rectangle."""
 
     def __init__(self, width=0, height=0):
-
         """Constructor for the Rectangle class.
 
         Args:
@@ -22,7 +20,6 @@ class Rectangle:
 
     @property
     def width(self):
-
         """Property for the width of the rectangle."""
 
         return (self.__width)
@@ -31,18 +28,14 @@ class Rectangle:
     def width(self, value):
 
         if not isinstance(value, int):
-
             raise TypeError("size must be an integer")
-
         if value < 0:
-
             raise ValueError("size must be >= 0")
 
         self.__width = value
 
     @property
     def height(self):
-
         """Property for the current height of the rectangle."""
 
         return (self.__height)
@@ -51,11 +44,8 @@ class Rectangle:
     def height(self, value):
 
         if not isinstance(value, int):
-
             raise TypeError("height must be an integer")
-
         if value < 0:
-
             raise ValueError("height must be >= 0")
 
         self.__height = value
