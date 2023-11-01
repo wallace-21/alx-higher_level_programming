@@ -9,7 +9,7 @@ class Rectangle:
 
     def __init__(self, width=0, height=0):
 
-        """New rectangle
+        """Constructor for the Rectangle class.
 
         Args:
 
