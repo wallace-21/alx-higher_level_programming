@@ -9,7 +9,7 @@ class Rectangle:
 
     def __init__(self, width=0, height=0):
 
-        """New rectangle
+        """Constructor for the Rectangle class.
 
         Args:
 
@@ -70,6 +70,6 @@ class Rectangle:
 
         """perimeter of the rectangle"""
 
-        if (self.height == 0 and self.width == 0):
+        if (self.height == 0 or self.width == 0):
 
             return (0)
