@@ -1,5 +1,5 @@
 #!/usr/bin/python3
 def lookup(obj):
-    list = dir(obj)
+    attributes_and_methods = dir(obj)
 
-    return (list)
+    return (attributes_and_methods)
