@@ -1,6 +1,8 @@
 #!/usr/bin/python3
-def lookup(obj):
+"""define a functon called lookup with one arguments"""
 
+
+def lookup(obj):
     """
     Return a list of available attributes and methods of an object
 
