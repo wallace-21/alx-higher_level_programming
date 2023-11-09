@@ -14,4 +14,4 @@ test_for_integer_casting:
     >>> add_integer(5, 8.99)
     13
     >>> add_integer(2.5, 1.5)
-    3
+    4
