@@ -1,0 +1,17 @@
+>>> add_integer = __import__('0-add_integer').add_integer
+
+test_for_zero_values:
+    >>> add_integer(0, 5)
+    5
+    >>> add_integer(10, 0)
+    10
+    >>> add_integer(0, 0)
+    0
+
+test_for_integer_casting:
+    >>> add_integer(3.17, 7)
+    10
+    >>> add_integer(5, 8.99)
+    13
+    >>> add_integer(2.5, 1.5)
+    4
