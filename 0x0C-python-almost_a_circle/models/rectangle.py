@@ -50,14 +50,13 @@ class Rectangle(Base):
 
         if y < 0:
 
-            raise ValueError("y must be >= 0")
-
-        super().__init__(id)
+            raise ValueError("y must be >= 0"
 
         self.__width = width
         self.__height = height
         self.__x = x
         self.__y = y
+        super().__init__(id)
 
     @property
     def width(self):
@@ -171,3 +170,25 @@ class Rectangle(Base):
         if len(args) >= 5:
 
             self.__x = args[4]
+
+try:
+    Rectangle(10, "2")
+except Exception as e:
+    print("[{}] {}".format(e.__class__.__name__, e))
+
+try:
+    r = Rectangle(10, 2)
+    r.width = -10
+except Exception as e:
+    print("[{}] {}".format(e.__class__.__name__, e))
+
+try:
+    r = Rectangle(10, 2)
+    r.x = {}
+except Exception as e:
+    print("[{}] {}".format(e.__class__.__name__, e))
+
+try:
+    Rectangle(10, 2, 3, -1)
+except Exception as e:
+    print("[{}] {}".format(e.__class__.__name__, e))
