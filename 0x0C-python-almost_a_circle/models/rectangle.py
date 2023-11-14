@@ -1,24 +1,8 @@
 #!/usr/bin/python3
 """ define class base """
 
-
-class Base:
-    """ a class that manages id attribute and to
-    avoid duplicating the same code"""
-
-    __nb_objects = 0
-
-    def __init__(self, id=None):
-        """ constructor with 2 arguments
-        Args:
-            id: identifies instances of Base
-        """
-
-        if id is not None:
-            self.id = id
-        else:
-            Base.__nb_objects += 1
-            self.id = Base.__nb_objects
+from models.base import Base
+""" import Base """
 
 
 class Rectangle(Base):
@@ -154,7 +138,7 @@ class Rectangle(Base):
 
         if len(args) >= 1:
 
-            self._id = args[0]
+            self.id = args[0]
 
         if len(args) >= 2:
 
@@ -171,25 +155,3 @@ class Rectangle(Base):
         if len(args) >= 5:
 
             self.__x = args[4]
-
-try:
-    Rectangle(10, "2")
-except Exception as e:
-    print("[{}] {}".format(e.__class__.__name__, e))
-
-try:
-    r = Rectangle(10, 2)
-    r.width = -10
-except Exception as e:
-    print("[{}] {}".format(e.__class__.__name__, e))
-
-try:
-    r = Rectangle(10, 2)
-    r.x = {}
-except Exception as e:
-    print("[{}] {}".format(e.__class__.__name__, e))
-
-try:
-    Rectangle(10, 2, 3, -1)
-except Exception as e:
-    print("[{}] {}".format(e.__class__.__name__, e))
