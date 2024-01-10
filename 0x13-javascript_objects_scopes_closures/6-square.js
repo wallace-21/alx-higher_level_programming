@@ -12,7 +12,7 @@ class Square extends Rectangle {
       if (c === undefined) {
         console.log('X'.repeat(this.size));
       } else {
-        console.log('C'.repeat(this.size));
+        console.log(c.repeat(this.size));
       }
     }
   }
