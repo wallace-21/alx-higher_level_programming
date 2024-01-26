@@ -1,3 +1,3 @@
 #!/bin/bash
 #Bash script that takes in a URL, sends a GET request to the URL, and displays the body of the re
-echo "$(curl -s -w "%$2" "$1")
+echo "$(curl -s -w "%{https_code}" "$1" | wc -c)
