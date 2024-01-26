@@ -2,8 +2,8 @@
 
 from urllib import request
 
-if __name__ == "__main__":
-    with request.urlopen("https://alx-intranet.hbtn.io/status") as output:
-        out = output.read()
-        print("- type: {}".format(type(out)))
-        print("- content: {}".format(out))
+#if __name__ == "__main__":
+with request.urlopen("https://alx-intranet.hbtn.io/status") as output:
+    out = output.read()
+    print("- type: {}".format(type(out)))
+    print("- content: {}".format(out))
