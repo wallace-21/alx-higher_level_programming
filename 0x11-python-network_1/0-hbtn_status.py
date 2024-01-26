@@ -6,5 +6,5 @@ from urllib import request
 with request.urlopen("https://alx-intranet.hbtn.io/status") as output:
     out = output.read()
     print("Body response:")
-    print("    - type: {}".format(type(out)))
-    print("    - content: {}".format(out))
+    print("\t- type: {}".format(type(out)))
+    print("\t- content: {}".format(out))
