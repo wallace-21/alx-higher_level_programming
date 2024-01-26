@@ -3,7 +3,8 @@
 from urllib import request
 import sys
 
-put = sys.argv[1]
-with request.urlopen(put) as output:
-    request_id = output.headers['X-Request-Id']
-    print(request_id)
+if __name__ == "__main__":
+    put = sys.argv[1]
+    with request.urlopen(put) as output:
+        request_id = output.headers['X-Request-Id']
+        print(request_id)
