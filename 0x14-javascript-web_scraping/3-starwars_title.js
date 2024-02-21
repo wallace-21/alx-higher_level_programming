@@ -3,11 +3,11 @@
 const request = require('request');
 const id = process.argv[2];
 
-request(`https://swapi-api.hbtn.io/api/films/${id}`, (error, body) => {
+request(`https://swapi-api.hbtn.io/api/films/${id}`, (error, response, body) => {
   if (error) {
     console.error(error);
-  } else {
-    const res = JSON.parse(body);
+  } else if (response.statusCode === 200) {
+    const resp = JSON.parse(body);
     console.log(res.title);
   }
 });
